@@ -1,0 +1,21 @@
+.ui-slider-handle {
+  display: none;
+}
+
+.queue {
+  float: left;
+  width: 300px;
+  height: 600px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  border: 1px solid black;
+}
+
+.listview {
+  float: left;
+  width: 300px;
+  height: 600px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  border: 1px solid black;
+}

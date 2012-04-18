@@ -1,0 +1,15 @@
+!!!
+%html{html_attrs}
+  %head
+    %meta{:'http-equiv' => "Content-Type", :content => "text/html; charset=utf-8"}
+    %meta{:name => "lang", :content => "en"}
+    %title Audio
+    %link{:href=>'/css/main.css', :media => "screen", :rel => 'stylesheet', :type => "text/css"}
+    %link{:href=>'http://code.jquery.com/ui/jquery-ui-git.css', :media => "screen", :rel => 'stylesheet', :type => "text/css"}
+    %script{:type => "text/javascript", :src => "http://code.jquery.com/jquery.min.js"}
+    %script{:type => "text/javascript", :src => "http://code.jquery.com/ui/jquery-ui-git.js"}
+    %script{:type => "text/javascript", :src => "/js/soundmanager2-nodebug-jsmin.js"}
+    %script{:type => "text/javascript", :src => "/js/app.js"}
+    
+  %body
+    = yield

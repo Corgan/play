@@ -1,0 +1,25 @@
+#!/usr/bin/env ruby
+# encoding: UTF-8
+
+$:.unshift File.join(File.dirname(__FILE__), *%w[.. lib])
+
+require 'play'
+require 'thin'
+
+def start
+  EM.run do
+    Play::App.run!({:port => 5050})
+  end
+end
+
+def index_music
+  puts "play is indexing your music"
+  Play::Library.import_songs
+end
+
+case ARGV[0]
+when 'index'
+  index_music
+when 'start'
+  start
+end
