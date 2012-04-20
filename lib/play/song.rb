@@ -8,7 +8,7 @@ module Play
       item = QueuedItem.create(:session_id => session_id)
       item.song = self
       item.save
-      song
+      item.song
     end
   end
 end

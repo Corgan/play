@@ -272,6 +272,9 @@ $(document).ready(function(){
     
     loadArtists();
     updateQueue();
+    var updater = setInterval(function() {
+      updateQueue();
+    }, 2000);
   });
 });
 

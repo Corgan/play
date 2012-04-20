@@ -8,6 +8,7 @@ module Play
     set :session_secret, "thisisasecret"
     
     before do
+      session[:id] = params[:user] if !params[:user].nil? && session[:id] != params[:user]
       session[:id] = @env.fetch('HTTP_COOKIE','')[/#{@key}=([^,;]+)/,1] if session[:id].nil?
     end
     
